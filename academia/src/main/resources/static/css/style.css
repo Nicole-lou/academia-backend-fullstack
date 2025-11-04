@@ -1,0 +1,563 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base fonts: Montserrat for most UI, Anton for brand */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Anton', sans-serif;
+    margin-top: 80px;
+    background-size: cover;
+
+}
+
+:root {
+    --color-primary: #bf0b0b;
+    --color-secondary: #b4b4b4;
+    --color-background: #d4d4dc;
+    --color-text: #ffffff;
+    --color-accent: #5a5557;
+    --color-subtext: #1b1919;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: var(--color-secondary) !important;
+}
+
+.nav-link {
+    color: var(--color-subtext) !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--color-primary) !important;
+}
+
+.dropdown-menu {
+    background-color: var(--color-secondary);
+}
+
+.dropdown-item {
+    color: var(--color-text);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: var(--color-secondary);
+    color: var(--color-primary) !important;
+}
+
+.logo {
+    padding: 5px;
+}
+
+.logo-text {
+    font-family: 'Anton', sans-serif;
+    font-size: 2.5rem;
+}
+
+.logo-text span {
+    color: var(--color-primary);
+}
+
+.links {
+    font-weight: 500;
+    font-family: "Anton", sans-serif;
+    font-size: 1.2rem;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+}
+
+
+
+.Banner h1 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-text);
+    font-size: 3rem;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.Banner p {
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-text);
+    font-size: 1.3rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    max-width: 800px;
+}
+
+@media (max-width: 992px) {
+    /* Ajuste para o Título (H1) */
+    .Banner h1 {
+        /* Diminuir a fonte drasticamente para caber */
+        font-size: 1.4rem;
+
+        /* Ajustar a posição para que o H1 não fique muito baixo */
+        top: 50%;
+    }
+
+    /* Ajuste para o Parágrafo (P) */
+    .Banner p {
+        /* Diminuir a fonte */
+        font-size: 0.8rem;
+
+        /* Afastar o P do H1 o suficiente para não sobrepor */
+        top: 65%;
+
+        /* Reduzir a largura máxima para se adequar a telas estreitas */
+        max-width: 90%;
+    }
+}
+
+.Banner button {
+    font-family: "Anton", sans-serif;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    padding: 10px 10px;
+    border: 2px solid var(--color-secondary);
+    color: var(--color-primary);
+    cursor: pointer;
+
+}
+
+.Banner button:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+#why-choose-us {
+    background-color: var(--color-background);
+    width: 100%;
+    height: 100%;
+}
+
+.section-title {
+    color: var(--color-text);
+    font-family: "Anton", sans-serif;
+    font-size: 2rem;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.card-title {
+    font-family: "Anton", sans-serif;
+    font-size: 1.3rem;
+    color: var(--color-subtext);
+}
+
+.card-text {
+    font-family: "Montserrat", sans-serif;
+   font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--color-text);
+
+}
+
+.card-feature {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.card-feature:hover {
+    transform: translateY(-5px);
+}
+
+.card-red {
+    background-color: var(--color-primary) !important;
+    color: var(--color-text) !important;
+}
+
+.card-gray {
+    background-color: var(--color-accent) !important;
+    color: var(--color-text) !important;
+}
+
+/* Ícones dos cards */
+.card-feature .card-body {
+    /* Forçar alinhamento à esquerda dentro do corpo do card para que título e ícone comecem no mesmo ponto */
+    align-items: flex-start;
+}
+
+.card-icon {
+    width: 40px;
+    height: auto;
+    display: block;
+    margin-bottom: 0.5rem;
+    align-self: flex-start; /* garante que o ícone fique alinhado ao início do conteúdo */
+    margin-left: 0.6rem; /* pequena indentação para ficar próximo do início do título */
+}
+
+/* Filtrar/tintar o ícone para as cores desejadas */
+.icon-subtext {
+    /* tornar o ícone escuro (próximo de --color-subtext) */
+    filter: grayscale(1) brightness(0) saturate(100%);
+}
+
+.icon-accent {
+    /* aproximar para --color-accent; valores heurísticos */
+    filter: grayscale(1) sepia(1) saturate(300%) hue-rotate(200deg) brightness(0.6);
+}
+
+/* Section About: banner com conteúdo centralizado sobre a imagem */
+#about {
+    width: 100%;
+}
+
+#about .about-banner {
+    background-image: url('../img/ENERGYFITNESS-BANNER5.png');
+    background-size: cover;
+    background-position: center;
+    height: 420px;
+    position: relative;
+}
+
+#about .about-content h1 {
+    color: var(--color-text);
+    font-family: 'Anton', sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+#about .about-content p {
+    color: var(--color-text);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    max-width: 900px;
+    margin: 1rem auto;
+}
+
+/* Botão com a mesma aparência do carrossel, sem posicionamento absoluto */
+.banner-btn {
+    font-family: "Anton", sans-serif;
+    font-size: 1.2rem;
+    padding: 10px 10px;
+    border: 2px solid var(--color-secondary);
+    color: var(--color-primary);
+    background: transparent;
+    cursor: pointer;
+}
+
+.banner-btn:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+
+/* Section About Details */
+.about-bg {
+    background-color: var(--color-background);
+    width: 100%;
+}
+
+.about-details h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 2.5rem;
+    color: var(--color-text);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.about-details h2 span {
+    color: var(--color-primary);
+}
+
+.about-details p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+.about-details strong {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.mission-img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Seção Personal Trainers */
+#personal-trainers {
+    background-color: var(--color-accent);
+    width: 100%;
+    padding: 4rem 0;
+}
+
+.personal-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Em telas médias (md) ou maiores, cards ficam lado a lado */
+@media (min-width: 768px) {
+    .personal-container {
+        flex-direction: row;
+    }
+    .personal-box {
+        width: 340px; /* Largura fixa em desktop para manter tamanhos iguais */
+    }
+}
+
+.personal-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 8px;
+    background: transparent;
+    transition: transform 0.3s ease;
+    width: 100%; /* Ocupa toda largura em mobile */
+    max-width: 340px; /* Limita largura máxima mesmo em mobile */
+}
+
+.personal-box:hover {
+    transform: translateY(-5px);
+}
+
+.personal-img img {
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.personal-title {
+    color: var(--color-text);
+    font-family: 'Anton', sans-serif;
+    font-size: 1.4rem;
+    margin: 1rem 0 0.5rem;
+}
+
+.personal-text {
+    color: var(--color-text);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+
+/* Seção Gym Passes */
+#gym-passes {
+    background-color: var(--color-accent);
+    width: 100%;
+    padding: 4rem 0;
+}
+
+.section-title span {
+    color: var(--color-primary);
+}
+
+.section-subtitle {
+    color: var(--color-text);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+
+/* Plan pricing cards (gym-passes) */
+.plan-card {
+    background: rgba(0,0,0,0.45);
+    border: none;
+    color: var(--color-text);
+}
+
+.plan-card--highlight {
+    background-color: var(--color-primary) !important;
+
+}
+
+.plan-card--highlight .plan-title,
+.plan-card--highlight .plan-price {
+    color: var(--color-text);
+}
+
+
+.plan-title {
+    font-family: 'Anton', sans-serif;
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin-bottom: 0.25rem;
+}
+
+.plan-subtitle {
+    font-family: 'Anton', sans-serif;
+    color: var(--color-subtext);
+    font-size: 0.99rem;
+    margin-bottom: 0.5rem;
+}
+
+.plan-price {
+    font-family: 'Anton', sans-serif;
+    color: var(--color-primary);
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+
+.plan-desc {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-subtext);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.plan-features li {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: var(--color-subtext);
+    margin: 0.99rem 0;
+}
+
+.plan-features i {
+    color: var(--color-primary);
+}
+
+@media (min-width: 768px) {
+    .plan-card .card-body {
+        min-height: 360px; /* keep visual balance between cards in desktop */
+    }
+}
+
+/* Botão do card destacado: texto na cor --color-text */
+.plan-card--highlight .banner-btn {
+    color: var(--color-text);
+    border-color: var(--color-secondary);
+}
+
+#adress {
+    background-color: var(--color-background);
+    width: 100%;
+    padding: 2rem 0;
+}
+
+#adress h1 {
+    font-family: 'Anton', sans-serif;
+    color: var(--color-subtext);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+#adress p {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-subtext);
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.adress-contact {
+    font-family: 'Anton', sans-serif;
+    color: var(--color-primary);
+    font-size: 1.9rem;
+    margin: 0.5rem 0;
+}
+
+.adress-hours {
+    font-family: 'Anton', sans-serif;
+    color: var(--color-primary);
+    font-size: 1.9rem;
+    margin: 3rem;
+}
+
+.adress-week {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+#adress span {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+}
+
+/* Site footer styling */
+.site-footer {
+    background-color: var(--color-accent);
+    font-family: 'Anton', sans-serif;
+    color: var(--color-text);
+    padding: 2rem 0;
+}
+
+.site-footer h4 {
+    color: var(--color-text);
+    margin-bottom: 0.75rem;
+}
+
+.site-footer a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.site-footer a:hover {
+    color: var(--color-primary);
+}
+
+.footer-social-icon {
+    width: 28px;
+    height: auto;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.6rem; /* spacing similar to other nav lists */
+}
+
+.footer-copy {
+    color: var(--color-primary);
+    font-family: 'Anton', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+@media (max-width: 767px) {
+    .site-footer .footer-social ul {
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+}
