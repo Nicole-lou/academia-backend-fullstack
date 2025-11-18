@@ -27,6 +27,10 @@ public class HomeController {
         return "aulas";
     }
 
+    @GetMapping("/privacidade")
+    public String privacidade(Model model) {
+        return "privacidade";
+    }
 
 
 }
