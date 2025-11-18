@@ -1,6 +1,291 @@
 <#include "layouts/header.html">
 
-<h1>Página inicial</h1>
+<section id="banner">
+
+
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active Banner">
+                <img src="img/ENERGYFITNESS-BANNER1.png" class="d-block w-100" alt="Pessoas malhando na academia">
+
+                <div>
+                    <h1>Mente forte, corpo forte</h1>
+                    <p>TREINE HOJE PARA UM FUTURO QUE VOÇÊ MERECE.</p>
+                    <button type="button" class="banner-btn" onclick="location.href='#gym-passes'">Saiba Mais</button>
+                </div>
+            </div>
+
+            <div class="carousel-item Banner">
+                <img src="img/ENERGYFITNESS-BANNER2.png" class="d-block w-100" alt="Pessoas se exercitando na academia">
+                <div>
+                    <h1>EM BREVE APLICATIVO DA ENERGY FITNESS</h1>
+                    <p>SEUS TREINOS E RESULTADOS EM UM APP..</p>
+                    <button type="button" class="banner-btn" onclick="location.href='blog.html'">Saiba Mais</button>
+                </div>
+            </div>
+
+            <div class="carousel-item Banner">
+                <img src="img/ENERGYFITNESS-BANNER3.png" class="d-block w-100" alt="Pessoas se exercitando na academia">
+                <div>
+                    <h1>conheça nosso blog</h1>
+                    <p>DICAS DE TREINO, NUTRIÇÃO E SAÚDE EM GERAL E MUITO MAIS</p>
+                    <button type="button" class="banner-btn" onclick="location.href='blog.html'">Acessar o Blog</button>
+                </div> <!--FIM DIV TEXT-->
+            </div> <!--FIM DIV IMG-->
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+</section>
+
+<!-- Fim carrossel banner -->
+
+<!-- seção por que escolher nossa academia-->
+<section id="why-choose-us" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Porque escolher nossa academia?</h2>
+
+        <!-- Row com 2 colunas centralizadas e espaçadas -->
+        <div class="row justify-content-center gap-5">
+            <div class="col-12 col-md-5 d-flex">
+                <div class="card card-feature card-red w-100 h-100">
+                    <div class="card-body d-flex flex-column">
+                        <img src="img/icone-barra.png" alt="ícone" class="card-icon icon-subtext" />
+                        <h5 class="card-title">ENERGIA E FOCO MÁXIMO</h5>
+                        <p class="card-text flex-grow-1">Nossos planos de treino de alta intensidade são criados para quebrar
+                            platôs e liberar o seu potencial máximo, com foco total na sua meta.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-5 d-flex">
+                <div class="card card-feature card-gray w-100 h-100">
+                    <div class="card-body d-flex flex-column">
+                        <img src="img/icone-barra.png" alt="ícone" class="card-icon icon-accent" />
+                        <h5 class="card-title">DISCIPLINA E CONSTÂNCIA</h5>
+                        <p class="card-text flex-grow-1">Nossos Personal Trainers são especialistas em nutrição e movimento,
+                            garantindo que sua jornada seja segura, progressiva e que a disciplina vire um hábito duradouro.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!-- Fim seção por que escolher nossa academia-->
+
+
+<!--seção sobre a academia-->
+<section id="about">
+    <div class="about-banner d-flex align-items-center justify-content-center">
+        <div class="about-content text-center px-3">
+            <h1>SOBRE A ENERGY FITNESS</h1>
+            <p>A Energy Fitness é mais que uma academia. Somos o ponto de ignição para a sua transformação. Nascemos da
+                crença de que o corpo alcança o que a mente acredita. Por isso, entregamos um ambiente de alta energia, focado
+                em disciplina, constância e resultados reais.</p>
+            <button type="button" class="banner-btn" onclick="location.href='blog.html'">Acessar o Blog</button>
+        </div>
+    </div>
+</section>
+
+<!-- Seção detalhes sobre a academia -->
+<section class="about-details" id="about-details">
+    <div class="about-bg py-5">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-12 col-md-6">
+                    <h2>Nossa <span>Missão</span></h2>
+                    <p>Capacitar indivíduos a desbloquear seu potencial máximo através de treinos intensos, nutrição adequada e
+                        uma mentalidade focada em resultados.</p>
+                </div>
+                <div class="col-12 col-md-6 text-center">
+                    <img src="img/fitness-1.jpg" alt="Imagem de treino" class="mission-img">
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <h2>Nossos <span>Valores</span></h2>
+                    <div class="row mt-4">
+                        <div class="col-12 col-md-4 mb-4">
+                            <strong>Disciplina</strong>
+                            <p>Acreditamos que a disciplina é a chave para o sucesso a longo prazo.</p>
+                        </div>
+                        <div class="col-12 col-md-4 mb-4">
+                            <strong>Constância</strong>
+                            <p>Resultados reais vêm de esforços consistentes e dedicados.</p>
+                        </div>
+                        <div class="col-12 col-md-4 mb-4">
+                            <strong>Energia</strong>
+                            <p>Criamos um ambiente vibrante que motiva e inspira nossos membros a darem o seu melhor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Fim seção sobre a academia-->
+
+<section id="personal-trainers" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Conheça nossos Personal Trainers</h2>
+
+        <div class="personal-container">
+            <div class="personal-box">
+                <div class="personal-img">
+                    <img src="img/personal-1.jpg" alt="Professor Matheus" width="160" height="160">
+                </div>
+                <h4 class="personal-title">Professor Matheus</h4>
+                <p class="personal-text">CrossFit/Personal Trainer</p>
+            </div>
+
+            <div class="personal-box">
+                <div class="personal-img">
+                    <img src="img/personal-2.jpg" alt="Professora Fernanda" width="160" height="160">
+                </div>
+                <h4 class="personal-title">Professora Fernanda</h4>
+                <p class="personal-text">Dança/Jump/Personal Trainer</p>
+            </div>
+
+            <div class="personal-box">
+                <div class="personal-img">
+                    <img src="img/personal-3.jpg" alt="Professor Chin Ho Kelly" width="160" height="160">
+                </div>
+                <h4 class="personal-title">Professor Chin Ho Kelly</h4>
+                <p class="personal-text">Dança/Personal Trainer</p>
+            </div>
+
+        </div>
+    </div>
+
+</section> <!-- Fim seção personal trainers-->
+
+
+<section id="gym-passes">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Conheça nossos Planos da <span>Energy Fitness</span></h2>
+        <p class="section-subtitle text-center mb-5">Não importa o seu ponto de partida, temos o plano ideal para liberar
+            o seu potencial. Escolha a opção que melhor se encaixa no seu objetivo e no seu ritmo, e comece a investir no
+            seu eu do futuro hoje mesmo.</p>
+        <div class="row gy-4">
+            <!-- Plano Start (Básico) - primeira coluna com cor de background -->
+            <div class="col-12 col-md-4">
+                <div class="card plan-card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="plan-title">Plano Start (Básico)</h3>
+                        <h4 class="plan-subtitle">Tipo de plano: Mensal</h4>
+
+                        <div class="plan-price">R$ 99,90</div>
+
+                        <p class="plan-desc">Ideal para quem está começando e quer flexibilidade. Teste nossas instalações e
+                            descubra o prazer de treinar sem compromisso de longo prazo. Perfeito para manter a rotina.</p>
+
+                        <ul class="plan-features list-unstyled mt-auto">
+                            <li><i class="bi bi-check2-circle me-2"></i>Acesso Ilimitado à Musculação</li>
+                            <li><i class="bi bi-check2-circle me-2"></i>Acesso Ilimitado à Área Cardio</li>
+                            <li><i class="bi bi-check2-circle me-2"></i>Aulas Coletivas Limitadas (15/mês)</li>
+                        </ul>
+
+                        <button type="button" class="banner-btn">COMEÇAR AGORA</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exemplo de plano intermediário -->
+            <div class="col-12 col-md-4">
+                <div class="card plan-card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="plan-title">Plano Power (Mais Avançado)</h3>
+                        <h4 class="plan-subtitle">Tipo de plano: Semestral (Economia e Foco)</h4>
+                        <div class="plan-price">R$ 149,90</div>
+                        <p class="plan-desc">O melhor custo-benefício para quem busca resultados consistentes. Garanta acesso
+                            contínuo e receba um plano de treino completo a cada 30 dias.</p>
+                        <ul class="plan-features list-unstyled mt-auto">
+                            <li><i class="bi bi-check2-circle me-2"></i>Aulas Coletivas Ilimitadas</li>
+                            <li><i class="bi bi-check2-circle me-2"></i>Avaliação Física Inicial Detalhada.</li>
+                            <li><i class="bi bi-check2-circle me-2"></i>Desconto exclusivo em Personal Training.</li>
+                        </ul>
+                        <button type="button" class="banner-btn">ASSINAR POWER</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exemplo de plano avançado -->
+            <div class="col-12 col-md-4">
+                <div class="card plan-card h-100 plan-card--highlight">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="plan-title">Plano Premium (Mais Popular)</h3>
+                        <h4 class="plan-subtitle">Tipo de plano: Anual (Máximo Resultado)</h4>
+                        <div class="plan-price">R$ 129,90</div>
+                        <p class="plan-desc">Para quem leva o treino a sério e exige o máximo de suporte. Inclui todos os
+                            benefícios Power, mais 1 sessão Mensal de Avaliação e Fast-Pass para aulas.</p>
+                        <ul class="plan-features list-unstyled mt-auto">
+                            <li><i class="bi bi-check2-circle me-2"></i>Acesso Ilimitado à Musculação</li>
+                            <li><i class="bi bi-check2-circle me-2"></i>Acesso Ilimitado à Área Cardio</li>
+                            <li><i class="bi bi-check2-circle me-2"></i>Aulas Coletivas Ilimitadas</li>
+                            <li><i class="bi bi-check2-circle me-2"></i>1 Avaliação Técnica por Trimestre</li>
+                        </ul>
+                        <button type="button" class="banner-btn">LIBERAR PREMIUM</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section> <!-- Fim seção passes-->
+
+
+<section id="adress">
+    <div class="container">
+        <h1 class="section-title-adress text-center mb-5">Nosso Endereço</h1>
+        <p class="section-subtitle text-center mb-5">Venha nos visitar e descubra um ambiente dedicado ao seu bem-estar e
+            transformação física. Estamos localizados em um ponto de fácil acesso, prontos para recebê-lo com toda a energia
+            que você merece.</p>
+
+    </div>
+
+    <div>
+        <h2 class="adress-contact text-center">Energy Fitness Riachuelo</h2>
+        <p class="adress-location text-center"><span>Endereço:</span> Rua da Energia, 123 - Riachuelo, RJ</p>
+        <p class="adress-phone text-center"><span>Telefone:</span> (21) 1234-5678</p>
+
+        <h3 class="adress-hours text-center">Horário de Funcionamento</h3>
+        <p class="adress-week text-center">Segunda a Sexta: 06:00 - 22:00</p>
+        <p class="adress-week text-center">Sábado: 08:00 - 18:00</p>
+        <p class="adress-week text-center">Domingo: Fechado</p>
+
+    </div>
+
+    <div class="map-container text-center my-4" id="Endereço">
+        <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1511.4011509395593!2d-73.99747362197448!3d40.74437550093357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598b6145a441%3A0x693f5ca18d54c80e!2sGym%20U%20NYC!5e0!3m2!1spt-BR!2sbr!4v1761442123585!5m2!1spt-BR!2sbr"
+                width="1000" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+</section> <!-- Fim seção endereço-->
+
+
 
 
 <#include "layouts/footer.html">
