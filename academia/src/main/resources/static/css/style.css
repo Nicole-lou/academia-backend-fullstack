@@ -400,6 +400,25 @@ body {
 
 
 /* Plan pricing cards (gym-passes) */
+#gym-passes {
+    background-color: var(--color-accent);
+    width: 100%;
+    padding: 4rem 0;
+}
+
+.section-title span {
+    color: var(--color-primary);
+}
+
+.section-subtitle {
+    color: var(--color-text);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+
+/* Plan pricing cards (gym-passes) */
 .plan-card {
     background: rgba(0,0,0,0.45);
     border: none;
@@ -468,6 +487,7 @@ body {
     color: var(--color-text);
     border-color: var(--color-secondary);
 }
+
 
 #adress {
     background-color: var(--color-background);

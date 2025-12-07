@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Anton', sans-serif;
+    margin-top: 80px;
+    background-size: cover;
+}
+
+:root {
+    --color-primary: #bf0b0b;
+    --color-secondary: #b4b4b4;
+    --color-background: #d4d4dc;
+    --color-text: #ffffff;
+    --color-accent: #5a5557;
+    --color-subtext: #1b1919;
+}
+
+/* Banner responsivo usando Bootstrap breakpoints */
+#banner-blog {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    #banner-blog {
+        min-height: 400px;
+    }
+}
+
+@media (min-width: 992px) {
+    #banner-blog {
+        min-height: 500px;
+    }
+}
+
+.banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 1rem;
+    z-index: 2;
+    text-align: center;
+}
+
+.banner-text h1 {
+    color: var(--color-text);
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+@media (min-width: 576px) {
+    .banner-text h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .banner-text h1 {
+        font-size: 3rem;
+    }
+}
+
+.banner-text p {
+    color: var(--color-text);
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    max-width: 600px;
+    font-size: 1rem;
+    padding: 0 1rem;
+}
+
+@media (min-width: 576px) {
+    .banner-text p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .banner-text p {
+        font-size: 1.3rem;
+    }
+}
+
+/* Seção do blog post */
+#blog-post {
+    background-color: var(--color-background);
+    padding: 3rem 0;
+}
+
+/* Container responsivo do blog */
+#blog-post .container {
+    padding: 0 1rem;
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    #blog-post .container {
+        padding: 0 2rem;
+        max-width: 90%;
+    }
+}
+
+@media (min-width: 992px) {
+    #blog-post .container {
+        max-width: 95%;
+        margin-right: 0;
+    }
+
+    #blog-post article {
+        max-width: 1000px;
+        margin-left: auto;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    #blog-post .container {
+        max-width: 100%;
+    }
+
+    #blog-post article {
+        max-width: 1140px;
+        padding-right: 4rem;
+    }
+}
+
+/* Estilos dos posts */
+#blog-post .post-image {
+    border-radius: 0.3rem;
+}
+
+
+
+#blog-post .post-title {
+    font-family: 'Anton', sans-serif;
+    color: var(--color-subtext);
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    #blog-post .post-title {
+        font-size: 1.75rem;
+    }
+}
+
+#blog-post .post-category {
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+#blog-post .post-description {
+    color: var(--color-subtext);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Data do post */
+.post-date-box {
+    background: var(--color-primary);
+    color: var(--color-text);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.post-date-box .day {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.post-date-box .month-year {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+
+
