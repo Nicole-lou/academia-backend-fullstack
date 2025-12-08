@@ -27,8 +27,8 @@ public class CadastroController {
         return "cadastro"; // Retorna o template cadastro.html
     }
 
-    /* * Futuramente, o método POST para salvar os dados virá aqui:
-     * @PostMapping
-     * public String salvarCadastro(CadastroDTO dados) { ... }
-     */
+    /* * Futuramente, o método POST para salvar os dados virá aqui: */
+     /* @PostMapping
+     /* public String salvarCadastro(CadastroDTO dados) { ... } */
+
 }
