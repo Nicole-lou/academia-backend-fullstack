@@ -153,6 +153,7 @@ body {
     color: var(--color-primary);
 }
 
+/* Section Why Choose Us */
 #why-choose-us {
     background-color: var(--color-background);
     width: 100%;
@@ -400,25 +401,6 @@ body {
 
 
 /* Plan pricing cards (gym-passes) */
-#gym-passes {
-    background-color: var(--color-accent);
-    width: 100%;
-    padding: 4rem 0;
-}
-
-.section-title span {
-    color: var(--color-primary);
-}
-
-.section-subtitle {
-    color: var(--color-text);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-
-/* Plan pricing cards (gym-passes) */
 .plan-card {
     background: rgba(0,0,0,0.45);
     border: none;
@@ -488,7 +470,7 @@ body {
     border-color: var(--color-secondary);
 }
 
-
+/* Section Address */
 #adress {
     background-color: var(--color-background);
     width: 100%;
