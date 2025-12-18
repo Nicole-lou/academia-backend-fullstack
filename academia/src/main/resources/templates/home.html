@@ -251,8 +251,16 @@
 
 <!-- BOTÃO DE CADASTRO DINÂMICO -->
 <!-- Monta o link para a página de cadastro, substituindo espaços por '+'. -->
-<#assign planoUrl = plano.titulo?replace(' ', '+')>
-<a href="/cadastro?plano=${planoUrl}"
+<#-- Define o número do WhatsApp (Mudar para o seu número real) -->
+<#assign numeroWhatsApp = "21998877665">
+
+<#-- Monta o link para cada plano -->
+<#assign mensagemBase = "Olá! Tenho interesse no Plano ${plano.titulo}, que tal conversarmos?">
+
+<#-- Codifica a mensagem para o formato de URL do WhatsApp -->
+<#assign textoCodificado = mensagemBase?url('UTF-8')>
+<a href="https://wa.me/${21987123456}?text=${Olá! Gostaria de saber mais o Plano ${plano.titulo}"
+   target="_blank"
    class="banner-btn d-block text-center text-decoration-none">
     SAIBA MAIS
 </a>
