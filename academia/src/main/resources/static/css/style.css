@@ -153,6 +153,7 @@ body {
     color: var(--color-primary);
 }
 
+/* Section Why Choose Us */
 #why-choose-us {
     background-color: var(--color-background);
     width: 100%;
@@ -469,6 +470,7 @@ body {
     border-color: var(--color-secondary);
 }
 
+/* Section Address */
 #adress {
     background-color: var(--color-background);
     width: 100%;

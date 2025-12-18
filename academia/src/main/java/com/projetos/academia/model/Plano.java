@@ -66,6 +66,10 @@ public class Plano {
     @Column(name = "metadata", columnDefinition = "TEXT")
     private String metadata;
 
+    @Column(name = "ordem", columnDefinition = "INT")
+    private int ordem;
+
+
     // Se não estiver usando Lombok, adicione getters, setters, e construtores aqui.
 
 

@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Anton', sans-serif;
+    margin-top: 80px;
+    background-size: cover;
+}
+
+:root {
+    --color-primary: #bf0b0b;
+    --color-secondary: #b4b4b4;
+    --color-background: #d4d4dc;
+    --color-text: #ffffff;
+    --color-accent: #5a5557;
+    --color-subtext: #1b1919;
+}
+
+#banner-contact {
+     position: relative;
+    width: 100%;
+    min-height: 300px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    #banner-contact {
+        min-height: 400px;
+    }
+}
+
+@media (min-width: 992px) {
+    #banner-contact {
+        min-height: 500px;
+    }
+}
+
+.banner-img-contact {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-img-contact img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.banner-text-contact {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 1rem;
+    z-index: 2;
+    text-align: center;
+}
+
+.banner-text-contact h1 {
+    color: var(--color-text);
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+@media (min-width: 576px) {
+    .banner-text-contact h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .banner-text-contact h1 {
+        font-size: 3rem;
+    }
+}
+
+.contact-content h4 {
+    color: var(--color-text);
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-size: 1.9rem;
+}
+
+.contact-content p {
+    color: var(--color-text);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+
+.contact-box {
+    width: 900px;
+    max-width: 95%;
+    background-color: var(--color-secondary);
+    padding: 5rem;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.contact-box h4 {
+    margin: 0 0 1rem 0;
+}
+
+.contact-box p {
+    margin: 1rem 0 0 0;
+}
+
+.contact-content .banner-btn-contact,
+.contact-content button.banner-btn-contact {
+    font-family: "Anton", sans-serif;
+    position: static;
+    display: block;
+    margin: 0.79rem auto;
+    font-size: 1.05rem;
+    padding: 0.9rem 1.5rem;
+    background-color: #1dad52;
+    color: var(--color-text);
+    cursor: pointer;
+    text-transform: uppercase;
+    border: none;
+}
+
+.contact-content .banner-btn-contact:hover,
+.contact-content button.banner-btn-contact:hover {
+    background-color: #1ebe57;
+}
+
+
+
+@media (max-width: 420px) {
+    .banner-btn-contact {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+
+.banner-btn-contact .bi-whatsapp,
+.banner-btn-contact i {
+    font-size: 1.15rem;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    line-height: 1;
+}
+

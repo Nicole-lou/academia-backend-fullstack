@@ -66,22 +66,22 @@
         <!-- Row com 2 colunas centralizadas e espaçadas -->
         <div class="row justify-content-center gap-5">
             <div class="col-12 col-md-5 d-flex">
-                <div class="card card-feature card-red w-100 h-100">
+                <div class="card card-feature bg-danger text-light w-100 h-100">
                     <div class="card-body d-flex flex-column">
                         <img src="img/icone-barra.png" alt="ícone" class="card-icon icon-subtext" />
                         <h5 class="card-title">ENERGIA E FOCO MÁXIMO</h5>
-                        <p class="card-text flex-grow-1">Nossos planos de treino de alta intensidade são criados para quebrar
+                        <p class="card-text flex-grow-1 text-light">Nossos planos de treino de alta intensidade são criados para quebrar
                             platôs e liberar o seu potencial máximo, com foco total na sua meta.</p>
                     </div>
                 </div>
             </div>
 
             <div class="col-12 col-md-5 d-flex">
-                <div class="card card-feature card-gray w-100 h-100">
+                <div class="card card-feature card-gray bg-secondary text-light w-100 h-100">
                     <div class="card-body d-flex flex-column">
                         <img src="img/icone-barra.png" alt="ícone" class="card-icon icon-accent" />
                         <h5 class="card-title">DISCIPLINA E CONSTÂNCIA</h5>
-                        <p class="card-text flex-grow-1">Nossos Personal Trainers são especialistas em nutrição e movimento,
+                        <p class="card-text flex-grow-1 text-light">Nossos Personal Trainers são especialistas em nutrição e movimento,
                             garantindo que sua jornada seja segura, progressiva e que a disciplina vire um hábito duradouro.</p>
                     </div>
                 </div>
@@ -185,74 +185,88 @@
         <p class="section-subtitle text-center mb-5">Não importa o seu ponto de partida, temos o plano ideal para liberar
             o seu potencial. Escolha a opção que melhor se encaixa no seu objetivo e no seu ritmo, e comece a investir no
             seu eu do futuro hoje mesmo.</p>
-        <div class="row gy-4">
-            <!-- Plano Start (Básico) - primeira coluna com cor de background -->
+
+        <!-- DIRETIVA DO FREEMARKER PARA ITERAR SOBRE A LISTA 'planos' -->
+        <div class="row gy-4 justify-content-center">
+
+            <#list planos as plano>
+
+            <!-- Início do Card para cada 'plano' -->
             <div class="col-12 col-md-4">
-                <div class="card plan-card h-100">
-                    <div class="card-body d-flex flex-column">
-                        <h3 class="plan-title">Plano Start (Básico)</h3>
-                        <h4 class="plan-subtitle">Tipo de plano: Mensal</h4>
 
-                        <div class="plan-price">R$ 99,90</div>
+                <!-- Aplica a classe de destaque (FreeMarker usa if_exists ou lógica externa) -->
+                <div class="card plan-card h-100 ${ (plano.metadata?? && plano.metadata?contains('"destaque":"true"'))?then('plan-card--highlight bg-danger', '') }">
+                <div class="card-body d-flex flex-column">
 
-                        <p class="plan-desc">Ideal para quem está começando e quer flexibilidade. Teste nossas instalações e
-                            descubra o prazer de treinar sem compromisso de longo prazo. Perfeito para manter a rotina.</p>
+                    <!-- Título do Plano -->
+                    <h3 class="plan-title">${plano.titulo}</h3>
 
-                        <ul class="plan-features list-unstyled mt-auto">
-                            <li><i class="bi bi-check2-circle me-2"></i>Acesso Ilimitado à Musculação</li>
-                            <li><i class="bi bi-check2-circle me-2"></i>Acesso Ilimitado à Área Cardio</li>
-                            <li><i class="bi bi-check2-circle me-2"></i>Aulas Coletivas Limitadas (15/mês)</li>
-                        </ul>
+                    <!-- Tipo de Plano -->
+                    <h4 class="plan-subtitle">Tipo de plano: ${plano.tipo}</h4>
 
-                        <button type="button" class="banner-btn">COMEÇAR AGORA</button>
-                    </div>
-                </div>
-            </div>
+                    <!-- Preço do Plano (Usamos a formatação do FreeMarker) -->
+                    <div class="plan-price">R$ ${plano.preco?string["#.00"]}</div>
 
-            <!-- Exemplo de plano intermediário -->
-            <div class="col-12 col-md-4">
-                <div class="card plan-card h-100">
-                    <div class="card-body d-flex flex-column">
-                        <h3 class="plan-title">Plano Power (Mais Avançado)</h3>
-                        <h4 class="plan-subtitle">Tipo de plano: Semestral (Economia e Foco)</h4>
-                        <div class="plan-price">R$ 149,90</div>
-                        <p class="plan-desc">O melhor custo-benefício para quem busca resultados consistentes. Garanta acesso
-                            contínuo e receba um plano de treino completo a cada 30 dias.</p>
-                        <ul class="plan-features list-unstyled mt-auto">
-                            <li><i class="bi bi-check2-circle me-2"></i>Aulas Coletivas Ilimitadas</li>
-                            <li><i class="bi bi-check2-circle me-2"></i>Avaliação Física Inicial Detalhada.</li>
-                            <li><i class="bi bi-check2-circle me-2"></i>Desconto exclusivo em Personal Training.</li>
-                        </ul>
-                        <button type="button" class="banner-btn">ASSINAR POWER</button>
-                    </div>
-                </div>
-            </div>
+                    <!-- Descrição do Plano -->
+                    <p class="plan-desc">${plano.descricao}</p>
 
-            <!-- Exemplo de plano avançado -->
-            <div class="col-12 col-md-4">
-                <div class="card plan-card h-100 plan-card--highlight">
-                    <div class="card-body d-flex flex-column">
-                        <h3 class="plan-title">Plano Premium (Mais Popular)</h3>
-                        <h4 class="plan-subtitle">Tipo de plano: Anual (Máximo Resultado)</h4>
-                        <div class="plan-price">R$ 129,90</div>
-                        <p class="plan-desc">Para quem leva o treino a sério e exige o máximo de suporte. Inclui todos os
-                            benefícios Power, mais 1 sessão Mensal de Avaliação e Fast-Pass para aulas.</p>
-                        <ul class="plan-features list-unstyled mt-auto">
-                            <li><i class="bi bi-check2-circle me-2"></i>Acesso Ilimitado à Musculação</li>
-                            <li><i class="bi bi-check2-circle me-2"></i>Acesso Ilimitado à Área Cardio</li>
-                            <li><i class="bi bi-check2-circle me-2"></i>Aulas Coletivas Ilimitadas</li>
-                            <li><i class="bi bi-check2-circle me-2"></i>1 Avaliação Técnica por Trimestre</li>
-                        </ul>
-                        <button type="button" class="banner-btn">LIBERAR PREMIUM</button>
-                    </div>
-                </div>
-            </div>
+                    <!-- LISTA DE BENEFÍCIOS (BASEADO NOS BOOLEANS) -->
+                    <ul class="plan-features list-unstyled mt-auto">
 
-        </div>
+                        <!-- Benefício: Musculação -->
+                        <#if plano.opcMusculacao>
+                        <li><i class="bi bi-check2-circle me-2"></i>Acesso Ilimitado à Musculação</li>
+                        <#else>
+                        <li class="text-danger"><i class="bi bi-x-circle me-2"></i>Musculação Não Inclusa</li>
+                    </#if>
 
-    </div>
+                    <!-- Benefício: Cardio -->
+                    <#if plano.opcCardio>
+                    <li><i class="bi bi-check2-circle me-2"></i>Acesso Ilimitado à Área Cardio</li>
+                    <#else>
+                    <li class="text-danger"><i class="bi bi-x-circle me-2"></i>Cardio Não Inclusa</li>
+                </#if>
 
-</section> <!-- Fim seção passes-->
+                <!-- Benefício: Aulas Coletivas Ilimitadas -->
+                <#if plano.opcColetivasIl>
+                <li><i class="bi bi-check2-circle me-2"></i>Aulas Coletivas Ilimitadas</li>
+            </#if>
+
+            <!-- Benefício: Aulas Coletivas (15/mês) -->
+            <#if plano.opcColetivas15>
+            <li><i class="bi bi-check2-circle me-2"></i>Aulas Coletivas Limitadas (15/mês)</li>
+        </#if>
+
+        <!-- Benefício: Avaliação Física -->
+        <#if plano.opcAvFisica>
+        <li><i class="bi bi-check2-circle me-2"></i>Avaliação Física Detalhada</li>
+    </#if>
+
+    <!-- Benefício: Desconto Personal -->
+    <#if plano.opcDescontoPersonal>
+    <li><i class="bi bi-check2-circle me-2"></i>Desconto exclusivo Personal Training</li>
+</#if>
+
+</ul>
+
+<!-- BOTÃO DE CADASTRO DINÂMICO -->
+<!-- Monta o link para a página de cadastro, substituindo espaços por '+'. -->
+<#assign planoUrl = plano.titulo?replace(' ', '+')>
+<a href="/cadastro?plano=${planoUrl}"
+   class="banner-btn d-block text-center text-decoration-none">
+    SAIBA MAIS
+</a>
+
+</div>
+</div>
+</div>
+<!-- Fim do Card -->
+
+</#list>
+
+</div>
+</div>
+</section>
 
 
 <section id="adress">
