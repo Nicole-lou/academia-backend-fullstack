@@ -259,12 +259,16 @@
 
 <#-- Codifica a mensagem para o formato de URL do WhatsApp -->
 <#assign textoCodificado = mensagemBase?url('UTF-8')>
-<a href="https://wa.me/${21987123456}?text=${Olá! Gostaria de saber mais o Plano ${plano.titulo}"
+<#-- 1. Definimos o número e a mensagem antes para o código ficar limpo -->
+<#assign numeroWhats = "21987123456">
+<#assign mensagemWhats = "Olá! Gostaria de saber mais sobre " + plano.titulo>
+
+<#-- 2. No link, usamos ?url para codificar os espaços e caracteres especiais -->
+<a href="https://wa.me/${numeroWhats}?text=${mensagemWhats?url}"
    target="_blank"
    class="banner-btn d-block text-center text-decoration-none">
     SAIBA MAIS
 </a>
-
 </div>
 </div>
 </div>
